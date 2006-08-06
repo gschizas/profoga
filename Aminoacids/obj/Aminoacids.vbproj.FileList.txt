@@ -1,9 +1,0 @@
-bin\Debug\Aminoacids.dll
-bin\Debug\Aminoacids.pdb
-bin\Debug\Aminoacids.xml
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\Aminoacids.vbproj.GenerateResource.Cache
-obj\Debug\Aminoacids.dll
-obj\Debug\Aminoacids.xml
-obj\Debug\Aminoacids.pdb
-obj\Debug\TerraSoft.BioTech.ProFoGA.Aminoacids.Resources.resources

@@ -1,9 +1,0 @@
-bin\Debug\Critters.dll
-bin\Debug\Critters.pdb
-bin\Debug\Critters.xml
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\Critters.vbproj.GenerateResource.Cache
-obj\Debug\Critters.dll
-obj\Debug\Critters.xml
-obj\Debug\Critters.pdb
-obj\Debug\TerraSoft.BioTech.ProFoGA.Critters.Resources.resources

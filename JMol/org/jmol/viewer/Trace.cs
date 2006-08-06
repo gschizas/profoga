@@ -1,0 +1,58 @@
+/* $RCSfile$
+* $Author: egonw $
+* $Date: 2005-11-10 16:52:44 +0100 (jeu., 10 nov. 2005) $
+* $Revision: 4255 $
+*
+* Copyright (C) 2003-2005  The Jmol Development Team
+*
+* Contact: jmol-developers@lists.sf.net
+*
+*  This library is free software; you can redistribute it and/or
+*  modify it under the terms of the GNU Lesser General Public
+*  License as published by the Free Software Foundation; either
+*  version 2.1 of the License, or (at your option) any later version.
+*
+*  This library is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+*  Lesser General Public License for more details.
+*
+*  You should have received a copy of the GNU Lesser General Public
+*  License along with this library; if not, write to the Free Software
+*  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+using System;
+namespace org.jmol.viewer
+{
+	
+	class Trace:Mps
+	{
+		
+		internal override Mps.Mpspolymer allocateMpspolymer(Polymer polymer)
+		{
+			return new Tchain(this, polymer);
+		}
+		
+		//UPGRADE_NOTE: Field 'EnclosingInstance' was added to class 'Tchain' to access its enclosing instance. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1019'"
+		internal class Tchain:Mps.Mpspolymer
+		{
+			private void  InitBlock(Trace enclosingInstance)
+			{
+				this.enclosingInstance = enclosingInstance;
+			}
+			private Trace enclosingInstance;
+			public Trace Enclosing_Instance
+			{
+				get
+				{
+					return enclosingInstance;
+				}
+				
+			}
+			internal Tchain(Trace enclosingInstance, Polymer polymer):base(polymer, 600, 1500, 500, 1500)
+			{
+				InitBlock(enclosingInstance);
+			}
+		}
+	}
+}

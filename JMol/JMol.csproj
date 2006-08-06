@@ -1,0 +1,485 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <SchemaVersion>2.0</SchemaVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>JMol</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JMol</RootNamespace>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <ProjectGuid>{10B70D82-CCDE-44FD-9D7F-96E8A240A229}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="com\obrador\Jpeg.cs" />
+    <Compile Include="com\obrador\JpegEncoder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JmolApplet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JmolAppletControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="org\jmol\adapter\smarter\Atom.cs" />
+    <Compile Include="org\jmol\adapter\smarter\AtomSetCollection.cs" />
+    <Compile Include="org\jmol\adapter\smarter\AtomSetCollectionReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\Bond.cs" />
+    <Compile Include="org\jmol\adapter\smarter\CifReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\CmlReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\CsfReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\CubeReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\FoldingXyzReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\FractionalAtom.cs" />
+    <Compile Include="org\jmol\adapter\smarter\GamessReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\GaussianReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\GhemicalMMReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\HinReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\JaguarReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\JmeReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\MolproReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\MolReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\MopacReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\NWChemReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\PdbReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\QchemReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\Resolver.cs" />
+    <Compile Include="org\jmol\adapter\smarter\ShelxReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\SmarterJmolAdapter.cs" />
+    <Compile Include="org\jmol\adapter\smarter\SpartanReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\SpartanSmolReader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\Strand.cs" />
+    <Compile Include="org\jmol\adapter\smarter\Structure.cs" />
+    <Compile Include="org\jmol\adapter\smarter\V3000Reader.cs" />
+    <Compile Include="org\jmol\adapter\smarter\XyzReader.cs" />
+    <Compile Include="org\jmol\api\JmolAdapter.cs" />
+    <Compile Include="org\jmol\api\JmolAppletInterface.cs" />
+    <Compile Include="org\jmol\api\JmolSelectionListener.cs" />
+    <Compile Include="org\jmol\api\JmolSimpleViewer.cs" />
+    <Compile Include="org\jmol\api\JmolStatusListener.cs" />
+    <Compile Include="org\jmol\api\JmolViewer.cs" />
+    <Compile Include="org\jmol\appletwrapper\AppletWrapper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="org\jmol\appletwrapper\ClassPreloader.cs" />
+    <Compile Include="org\jmol\appletwrapper\WrappedApplet.cs" />
+    <Compile Include="org\jmol\appletwrapper\WrappedAppletLoader.cs" />
+    <Compile Include="org\jmol\applet\Console.cs" />
+    <Compile Include="org\jmol\applet\Jmol.cs" />
+    <Compile Include="org\jmol\applet\JmolAppletControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="org\jmol\applet\JmolAppletRegistry.cs" />
+    <Compile Include="org\jmol\applet\Jvm12.cs" />
+    <Compile Include="org\jmol\bspt\Bspf.cs" />
+    <Compile Include="org\jmol\bspt\Bspt.cs" />
+    <Compile Include="org\jmol\bspt\Element.cs" />
+    <Compile Include="org\jmol\bspt\Leaf.cs" />
+    <Compile Include="org\jmol\bspt\Node.cs" />
+    <Compile Include="org\jmol\bspt\SphereIterator.cs" />
+    <Compile Include="org\jmol\bspt\Tuple.cs" />
+    <Compile Include="org\jmol\g3d\Awt3D.cs" />
+    <Compile Include="org\jmol\g3d\Circle3D.cs" />
+    <Compile Include="org\jmol\g3d\Colix.cs" />
+    <Compile Include="org\jmol\g3d\Cylinder3D.cs" />
+    <Compile Include="org\jmol\g3d\Font3D.cs" />
+    <Compile Include="org\jmol\g3d\Geodesic3D.cs" />
+    <Compile Include="org\jmol\g3d\Geodesic3D2.cs" />
+    <Compile Include="org\jmol\g3d\Graphics3D.cs" />
+    <Compile Include="org\jmol\g3d\Hermite3D.cs" />
+    <Compile Include="org\jmol\g3d\Line3D.cs" />
+    <Compile Include="org\jmol\g3d\Normix3D.cs" />
+    <Compile Include="org\jmol\g3d\Platform3D.cs" />
+    <Compile Include="org\jmol\g3d\Rgb16.cs" />
+    <Compile Include="org\jmol\g3d\Shade3D.cs" />
+    <Compile Include="org\jmol\g3d\Sphere3D.cs" />
+    <Compile Include="org\jmol\g3d\Swing3D.cs" />
+    <Compile Include="org\jmol\g3d\Text3D.cs" />
+    <Compile Include="org\jmol\g3d\Triangle3D.cs" />
+    <Compile Include="org\jmol\i18n\GT.cs" />
+    <Compile Include="org\jmol\jcamp\data\GraphControlData.cs" />
+    <Compile Include="org\jmol\jcamp\GraphCharacteristics.cs" />
+    <Compile Include="org\jmol\jcamp\SaisieDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="org\jmol\jcamp\utils\NumericDataUtils.cs" />
+    <Compile Include="org\jmol\jcamp\utils\StringDataUtils.cs" />
+    <Compile Include="org\jmol\jcamp\Visua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="org\jmol\jcamp\ZoneVisu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="org\jmol\popup\JmolPopup.cs" />
+    <Compile Include="org\jmol\popup\JmolPopupAwt.cs" />
+    <Compile Include="org\jmol\popup\JmolPopupSwing.cs" />
+    <Compile Include="org\jmol\popup\PopupResourceBundle.cs" />
+    <Compile Include="org\jmol\smiles\InvalidSmilesException.cs" />
+    <Compile Include="org\jmol\smiles\SmilesAtom.cs" />
+    <Compile Include="org\jmol\smiles\SmilesBond.cs" />
+    <Compile Include="org\jmol\smiles\SmilesMolecule.cs" />
+    <Compile Include="org\jmol\smiles\SmilesParser.cs" />
+    <Compile Include="org\jmol\util\Bmp.cs" />
+    <Compile Include="org\jmol\util\Int2IntHash.cs" />
+    <Compile Include="org\jmol\util\Int2ObjHash.cs" />
+    <Compile Include="org\jmol\util\IntInt2ObjHash.cs" />
+    <Compile Include="org\jmol\viewer\AlphaMonomer.cs" />
+    <Compile Include="org\jmol\viewer\AlphaPolymer.cs" />
+    <Compile Include="org\jmol\viewer\AminoMonomer.cs" />
+    <Compile Include="org\jmol\viewer\AminoPolymer.cs" />
+    <Compile Include="org\jmol\viewer\Atom.cs" />
+    <Compile Include="org\jmol\viewer\AtomIterator.cs" />
+    <Compile Include="org\jmol\viewer\Axes.cs" />
+    <Compile Include="org\jmol\viewer\AxesRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Backbone.cs" />
+    <Compile Include="org\jmol\viewer\BackboneRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Balls.cs" />
+    <Compile Include="org\jmol\viewer\BallsRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Bbcage.cs" />
+    <Compile Include="org\jmol\viewer\BbcageRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Bond.cs" />
+    <Compile Include="org\jmol\viewer\BondIterator.cs" />
+    <Compile Include="org\jmol\viewer\Cartoon.cs" />
+    <Compile Include="org\jmol\viewer\CartoonRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Chain.cs" />
+    <Compile Include="org\jmol\viewer\Closest.cs" />
+    <Compile Include="org\jmol\viewer\ColorManager.cs" />
+    <Compile Include="org\jmol\viewer\Compiler.cs" />
+    <Compile Include="org\jmol\viewer\Dots.cs" />
+    <Compile Include="org\jmol\viewer\DotsRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Echo.cs" />
+    <Compile Include="org\jmol\viewer\EchoRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Eval.cs" />
+    <Compile Include="org\jmol\viewer\FileManager.cs" />
+    <Compile Include="org\jmol\viewer\Frame.cs" />
+    <Compile Include="org\jmol\viewer\FrameExportJmolAdapter.cs" />
+    <Compile Include="org\jmol\viewer\FrameRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Frank.cs" />
+    <Compile Include="org\jmol\viewer\FrankRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Group.cs" />
+    <Compile Include="org\jmol\viewer\Helix.cs" />
+    <Compile Include="org\jmol\viewer\Hover.cs" />
+    <Compile Include="org\jmol\viewer\HoverRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Hsticks.cs" />
+    <Compile Include="org\jmol\viewer\HsticksRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Isosurface.cs" />
+    <Compile Include="org\jmol\viewer\IsosurfaceRenderer.cs" />
+    <Compile Include="org\jmol\viewer\JmolConstants.cs" />
+    <Compile Include="org\jmol\viewer\Labels.cs" />
+    <Compile Include="org\jmol\viewer\LabelsRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Measurement.cs" />
+    <Compile Include="org\jmol\viewer\Measures.cs" />
+    <Compile Include="org\jmol\viewer\MeasuresRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Mesh.cs" />
+    <Compile Include="org\jmol\viewer\MeshCollection.cs" />
+    <Compile Include="org\jmol\viewer\MeshRenderer.cs" />
+    <Compile Include="org\jmol\viewer\MeshRibbon.cs" />
+    <Compile Include="org\jmol\viewer\MeshRibbonRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Mmset.cs" />
+    <Compile Include="org\jmol\viewer\Model.cs" />
+    <Compile Include="org\jmol\viewer\ModelManager.cs" />
+    <Compile Include="org\jmol\viewer\Monomer.cs" />
+    <Compile Include="org\jmol\viewer\MouseManager.cs" />
+    <Compile Include="org\jmol\viewer\MouseManager10.cs" />
+    <Compile Include="org\jmol\viewer\MouseManager11.cs" />
+    <Compile Include="org\jmol\viewer\MouseManager14.cs" />
+    <Compile Include="org\jmol\viewer\MouseWrapper11.cs" />
+    <Compile Include="org\jmol\viewer\MouseWrapper14.cs" />
+    <Compile Include="org\jmol\viewer\Mps.cs" />
+    <Compile Include="org\jmol\viewer\MpsRenderer.cs" />
+    <Compile Include="org\jmol\viewer\NucleicMonomer.cs" />
+    <Compile Include="org\jmol\viewer\NucleicPolymer.cs" />
+    <Compile Include="org\jmol\viewer\PatternMatcher.cs" />
+    <Compile Include="org\jmol\viewer\PendingMeasurement.cs" />
+    <Compile Include="org\jmol\viewer\PhosphorusMonomer.cs" />
+    <Compile Include="org\jmol\viewer\PhosphorusPolymer.cs" />
+    <Compile Include="org\jmol\viewer\PickingManager.cs" />
+    <Compile Include="org\jmol\viewer\Pmesh.cs" />
+    <Compile Include="org\jmol\viewer\PmeshRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Polyhedra.cs" />
+    <Compile Include="org\jmol\viewer\PolyhedraRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Polymer.cs" />
+    <Compile Include="org\jmol\viewer\ProteinStructure.cs" />
+    <Compile Include="org\jmol\viewer\Prueba.cs" />
+    <Compile Include="org\jmol\viewer\PruebaRenderer.cs" />
+    <Compile Include="org\jmol\viewer\RepaintManager.cs" />
+    <Compile Include="org\jmol\viewer\Ribbons.cs" />
+    <Compile Include="org\jmol\viewer\RibbonsRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Rockets.cs" />
+    <Compile Include="org\jmol\viewer\RocketsRenderer.cs" />
+    <Compile Include="org\jmol\viewer\SasCache.cs" />
+    <Compile Include="org\jmol\viewer\SasCavity.cs" />
+    <Compile Include="org\jmol\viewer\SasFlattenedPointList.cs" />
+    <Compile Include="org\jmol\viewer\SasGem.cs" />
+    <Compile Include="org\jmol\viewer\SasNeighborFinder.cs" />
+    <Compile Include="org\jmol\viewer\Sasurface.cs" />
+    <Compile Include="org\jmol\viewer\Sasurface1.cs" />
+    <Compile Include="org\jmol\viewer\SasurfaceRenderer.cs" />
+    <Compile Include="org\jmol\viewer\ScriptException.cs" />
+    <Compile Include="org\jmol\viewer\SelectionIndependentShape.cs" />
+    <Compile Include="org\jmol\viewer\SelectionManager.cs" />
+    <Compile Include="org\jmol\viewer\Shape.cs" />
+    <Compile Include="org\jmol\viewer\ShapeRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Sheet.cs" />
+    <Compile Include="org\jmol\viewer\Sssticks.cs" />
+    <Compile Include="org\jmol\viewer\SssticksRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Stars.cs" />
+    <Compile Include="org\jmol\viewer\StarsRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Sticks.cs" />
+    <Compile Include="org\jmol\viewer\SticksRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Strands.cs" />
+    <Compile Include="org\jmol\viewer\StrandsRenderer.cs" />
+    <Compile Include="org\jmol\viewer\StyleManager.cs" />
+    <Compile Include="org\jmol\viewer\TempManager.cs" />
+    <Compile Include="org\jmol\viewer\Token.cs" />
+    <Compile Include="org\jmol\viewer\Trace.cs" />
+    <Compile Include="org\jmol\viewer\TraceRenderer.cs" />
+    <Compile Include="org\jmol\viewer\TransformManager.cs" />
+    <Compile Include="org\jmol\viewer\Turn.cs" />
+    <Compile Include="org\jmol\viewer\Uccage.cs" />
+    <Compile Include="org\jmol\viewer\UccageRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Util.cs" />
+    <Compile Include="org\jmol\viewer\Vectors.cs" />
+    <Compile Include="org\jmol\viewer\VectorsRenderer.cs" />
+    <Compile Include="org\jmol\viewer\Viewer.cs" />
+    <Compile Include="org\openscience\jmol\app\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\AtomSetChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\CommandHistory.cs" />
+    <Compile Include="org\openscience\jmol\app\ConsoleTextArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\DisplayPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\FileChooser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\FileDropper.cs" />
+    <Compile Include="org\openscience\jmol\app\FilePreview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\FileTyper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\GuiMap.cs" />
+    <Compile Include="org\openscience\jmol\app\HelpDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\HistoryFile.cs" />
+    <Compile Include="org\openscience\jmol\app\ImageSelection.cs" />
+    <Compile Include="org\openscience\jmol\app\ImageTyper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\Jmol.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\JmolResourceHandler.cs" />
+    <Compile Include="org\openscience\jmol\app\LoopedStreams.cs" />
+    <Compile Include="org\openscience\jmol\app\MeasurementTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\PngEncoder.cs" />
+    <Compile Include="org\openscience\jmol\app\PovrayDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\PovraySaver.cs" />
+    <Compile Include="org\openscience\jmol\app\PreferencesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\RecentFilesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\ScriptWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\StatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="org\openscience\jmol\app\WhatsNewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupportClass.cs" />
+    <Content Include="com\obrador\IJGreadme.txt" />
+    <Content Include="com\obrador\license.txt" />
+    <Content Include="com\obrador\version.txt" />
+    <Content Include="jmol75x29x8.gif" />
+    <Content Include="org\jmol\bspt\package.html" />
+    <Content Include="org\jmol\g3d\package.html" />
+    <Content Include="org\jmol\smiles\package.html" />
+    <Content Include="org\jmol\viewer\crystal_ionic_radii.xls" />
+    <Content Include="org\openscience\jmol\app\About.html" />
+    <Content Include="org\openscience\jmol\app\About_de.html" />
+    <Content Include="org\openscience\jmol\app\About_fr.html" />
+    <Content Include="org\openscience\jmol\images\angle.gif" />
+    <Content Include="org\openscience\jmol\images\angleButton.gif" />
+    <Content Include="org\openscience\jmol\images\animateButton.gif" />
+    <Content Include="org\openscience\jmol\images\atomProps.gif" />
+    <Content Include="org\openscience\jmol\images\bottomButton.gif" />
+    <Content Include="org\openscience\jmol\images\boxButton.gif" />
+    <Content Include="org\openscience\jmol\images\copyButton.gif" />
+    <Content Include="org\openscience\jmol\images\crystalBaseVec.gif" />
+    <Content Include="org\openscience\jmol\images\crystalBox.gif" />
+    <Content Include="org\openscience\jmol\images\crystalButton.gif" />
+    <Content Include="org\openscience\jmol\images\crystalEnergyBand.gif" />
+    <Content Include="org\openscience\jmol\images\crystalInfo.gif" />
+    <Content Include="org\openscience\jmol\images\crystalNotation.gif" />
+    <Content Include="org\openscience\jmol\images\crystalPrimVec.gif" />
+    <Content Include="org\openscience\jmol\images\cutButton.gif" />
+    <Content Include="org\openscience\jmol\images\deleteButton.gif" />
+    <Content Include="org\openscience\jmol\images\DeleteRow.gif" />
+    <Content Include="org\openscience\jmol\images\DownRight.gif" />
+    <Content Include="org\openscience\jmol\images\exitButton.gif" />
+    <Content Include="org\openscience\jmol\images\exportButton.gif" />
+    <Content Include="org\openscience\jmol\images\ffButton.gif" />
+    <Content Include="org\openscience\jmol\images\frontButton.gif" />
+    <Content Include="org\openscience\jmol\images\globe1.gif" />
+    <Content Include="org\openscience\jmol\images\globe2.gif" />
+    <Content Include="org\openscience\jmol\images\graphButton.gif" />
+    <Content Include="org\openscience\jmol\images\handButton.gif" />
+    <Content Include="org\openscience\jmol\images\homeButton.gif" />
+    <Content Include="org\openscience\jmol\images\icon.jpg" />
+    <Content Include="org\openscience\jmol\images\Jmol_logo.jpg" />
+    <Content Include="org\openscience\jmol\images\Jmol_splash.jpg" />
+    <Content Include="org\openscience\jmol\images\leftButton.gif" />
+    <Content Include="org\openscience\jmol\images\measureButton.gif" />
+    <Content Include="org\openscience\jmol\images\movieButton.gif" />
+    <Content Include="org\openscience\jmol\images\newButton.gif" />
+    <Content Include="org\openscience\jmol\images\NewRow.gif" />
+    <Content Include="org\openscience\jmol\images\nextButton.gif" />
+    <Content Include="org\openscience\jmol\images\openButton.gif" />
+    <Content Include="org\openscience\jmol\images\openUrlButton.gif" />
+    <Content Include="org\openscience\jmol\images\pasteButton.gif" />
+    <Content Include="org\openscience\jmol\images\pauseButton.gif" />
+    <Content Include="org\openscience\jmol\images\pickButton.gif" />
+    <Content Include="org\openscience\jmol\images\playButton.gif" />
+    <Content Include="org\openscience\jmol\images\povray.jpg" />
+    <Content Include="org\openscience\jmol\images\prevButton.gif" />
+    <Content Include="org\openscience\jmol\images\printButton.gif" />
+    <Content Include="org\openscience\jmol\images\redoButton.gif" />
+    <Content Include="org\openscience\jmol\images\rewButton.gif" />
+    <Content Include="org\openscience\jmol\images\rightButton.gif" />
+    <Content Include="org\openscience\jmol\images\rotateButton.gif" />
+    <Content Include="org\openscience\jmol\images\ruler.gif" />
+    <Content Include="org\openscience\jmol\images\rulerButton.gif" />
+    <Content Include="org\openscience\jmol\images\saveButton.gif" />
+    <Content Include="org\openscience\jmol\images\topButton.gif" />
+    <Content Include="org\openscience\jmol\images\undoButton.gif" />
+    <Content Include="org\openscience\jmol\images\UpRight.gif" />
+    <Content Include="org\openscience\jmol\images\vibrateButton.gif" />
+    <Content Include="org\openscience\jmol\images\xlateButton.gif" />
+    <Content Include="org\openscience\jmol\images\zoomButton.gif" />
+    <Content Include="org\openscience\jmol\Properties\Jmol-resources.resources" />
+    <Content Include="org\openscience\jmol\Properties\Jmol.de.resources" />
+    <Content Include="org\openscience\jmol\Properties\Jmol.es.resources" />
+    <Content Include="org\openscience\jmol\Properties\Jmol.fr.resources" />
+    <Content Include="org\openscience\jmol\Properties\Jmol.nl.resources" />
+    <Content Include="org\openscience\jmol\Properties\Jmol.pl.resources" />
+    <Content Include="org\openscience\jmol\Properties\Jmol.resources" />
+    <Content Include="package-template.html" />
+    <None Include="_ConversionReport.htm">
+      <SubType>Preview</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

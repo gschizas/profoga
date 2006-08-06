@@ -1,0 +1,12 @@
+bin\Debug\Fitness.dll
+bin\Debug\Fitness.pdb
+bin\Debug\Fitness.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Fitness.vbproj.GenerateResource.Cache
+obj\Debug\Fitness.dll
+obj\Debug\Fitness.xml
+obj\Debug\Fitness.pdb
+obj\Debug\TerraSoft.BioTech.ProFoGA.Fitness.Resources.resources
+bin\Debug\Aminoacids.dll
+bin\Debug\Aminoacids.pdb
+bin\Debug\Aminoacids.xml
